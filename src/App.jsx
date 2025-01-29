@@ -161,7 +161,7 @@ function App() {
       </div>
 
       <div className="flex flex-col info:flex-row justify-center items-center">
-        <img className="w-full lg:max-w-2xl info:max-h-[15.3rem]" src={imgdark} alt="" />
+        <img className="w-full lg:max-w-2xl info:max-h-72" src={imgdark} alt="" />
         <div className="px-12 py-16 info:px-10 info:pt-4  info:pb-0 max-w-lg mx-auto lg:mx-0">
           <h1 className="font-semibold tracking-[.4rem] uppercase mb-5 lg:mb-3">
             About our furniture
@@ -175,7 +175,7 @@ function App() {
             help you create your dream space.
           </p>
         </div>
-        <img className="w-full lg:max-w-2xl info:max-h-[15.3rem]" src={imglight} alt="" />
+        <img className="w-full lg:max-w-2xl info:max-h-72" src={imglight} alt="" />
       </div>
     </div>
   );
