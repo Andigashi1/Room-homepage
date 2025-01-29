@@ -55,22 +55,25 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleImgChange = useCallback((type) => {
-    if (type === "next") {
-      setImgIndex((imgIndex + 1) % images.length);
-    } else if (type === "prev") {
-      setImgIndex((imgIndex - 1 + images.length) % mobileImgs.length);
-    }
-  },[images.length, imgIndex]);
+  const handleImgChange = useCallback(
+    (type) => {
+      if (type === "next") {
+        setImgIndex((imgIndex + 1) % images.length);
+      } else if (type === "prev") {
+        setImgIndex((imgIndex - 1 + images.length) % mobileImgs.length);
+      }
+    },
+    [images.length, imgIndex]
+  );
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'ArrowLeft') handleImgChange('prev');
-      if (e.key === 'ArrowRight') handleImgChange('next');
+      if (e.key === "ArrowLeft") handleImgChange("prev");
+      if (e.key === "ArrowRight") handleImgChange("next");
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleImgChange]);
 
   useEffect(() => {
@@ -88,16 +91,16 @@ function App() {
   }, [isMobile]);
 
   return (
-    <div className="max-w-container font-display">
+    <div className="max-w-container flex flex-col min-h-screen font-display">
       <Nav isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       {isMenuOpen && (
         <div className="inset-0 absolute min-h-full z-10 bg-black/75"></div>
       )}
-      <div className="flex flex-col lg:flex-row max-lg:items-center">
-        <div className="flex overflow-x-hidden relative lg:max-w-[55%]">
+      <div className="flex flex-col lg:flex-row max-lg:items-center lg:h-[65vh]">
+        <div className="flex overflow-x-hidden relative">
           {images.map((img, index) => (
             <img
-              className={`w-full min-w-full object-cover transition:transform duration-200`}
+              className={`w-full min-w-full h-full object-cover transition:transform duration-200`}
               style={{
                 transform: `translateX(-${imgIndex * 100}%)`,
               }}
@@ -125,11 +128,8 @@ function App() {
           </div>
         </div>
 
-        <div className="lg:max-w-2xl w-full max-lg:max-w-lg relative">
-          <div
-            key={imgIndex}
-            className="px-10 py-16 lg:p-20 flex flex-col justify-center h-full"
-          >
+        <div className="flex flex-col justify-center items-center w-full max-lg:max-w-lg relative px-10 py-16 lg:p-20">
+          <div key={imgIndex} className="max-w-xl">
             <h1
               className="text-[2.5rem] lg:text-5xl leading-10 font-semibold mb-5 transition duration-200 ease-out
              motion-safe:animate-[fade-in_0.3s_ease-out]"
@@ -160,13 +160,17 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col info:flex-row justify-center items-center">
-        <img className="w-full lg:max-w-2xl info:max-h-72" src={imgdark} alt="" />
-        <div className="px-12 py-16 info:px-10 info:pt-4  info:pb-0 max-w-lg mx-auto lg:mx-0">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full h-[35vh]">
+          <img
+            className="w-full h-full object-cover max-w-xl"
+            src={imgdark}
+            alt=""
+          />
+        <div className=" px-12 py-16 info:px-10 info:pt-4 lg:pb-0 max-lg:max-w-lg mx-auto lg:mx-0">
           <h1 className="font-semibold tracking-[.4rem] uppercase mb-5 lg:mb-3">
             About our furniture
           </h1>
-          <p className="text-gray1 md:max-lg:order-1">
+          <p className="text-gray1">
             Our multifunctional collection blends design and function to suit
             your individual taste. Make each room unique, or pick a cohesive
             theme that best express your interests and what inspires you. Find
@@ -175,7 +179,7 @@ function App() {
             help you create your dream space.
           </p>
         </div>
-        <img className="w-full lg:max-w-2xl info:max-h-72" src={imglight} alt="" />
+        <img className="w-full h-full object-cover max-w-xl" src={imglight} alt="" />
       </div>
     </div>
   );

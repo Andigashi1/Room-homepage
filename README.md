@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repo](https://github.com/Andigashi1/Room-homepage)
-- Live Site URL: [Live Site](room-homepage-nine-azure.vercel.app)
+- Live Site URL: [Live Site](https://room-homepage-nine-azure.vercel.app)
 
 ## My process
 
