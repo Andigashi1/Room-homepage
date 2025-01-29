@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme  {
+    --font-display: 'League Spartan', sans-serif;
+    
+    --breakpoint-container: 1440px;
+    --breakpoint-info: 1280px;
+
+    --color-gray1: hsl(0, 0%, 63%);
+    --color-gray2: hsl(0, 0%, 27%)
+
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
