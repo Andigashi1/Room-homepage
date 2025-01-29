@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Repo](https://github.com/Andigashi1/Room-homepage)
+- Live Site URL: [Live Site](room-homepage-nine-azure.vercel.app)
 
 ## My process
 
@@ -49,5 +49,5 @@ I learned how to make an image slider along with a little animation. Im proud of
 ## Author
 
 - Frontend Mentor - [@Andigashi1](https://www.frontendmentor.io/profile/Andigashi1)
-- LinkedIn - [Andi Gashi](https://www.linkedin.com/andi-gashi-2004)
+- LinkedIn - [Andi Gashi](https://www.linkedin.com/andi-gashi2004)
 
