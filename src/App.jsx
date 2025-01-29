@@ -129,7 +129,7 @@ function App() {
         </div>
 
         <div className="flex flex-col justify-center items-center w-full max-lg:max-w-lg relative px-10 py-16 lg:p-20">
-          <div key={imgIndex} className="max-w-xl">
+          <div key={imgIndex} className="max-w-xl flex-1">
             <h1
               className="text-[2.5rem] lg:text-5xl leading-10 font-semibold mb-5 transition duration-200 ease-out
              motion-safe:animate-[fade-in_0.3s_ease-out]"
@@ -160,7 +160,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full h-[35vh]">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full lg:h-[35vh]">
           <img
             className="w-full h-full object-cover max-w-xl"
             src={imgdark}
